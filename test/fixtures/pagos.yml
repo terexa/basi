@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  venta: 1
+  monto: 1
+  notas: MyText
+
+two:
+  venta: 1
+  monto: 1
+  notas: MyText

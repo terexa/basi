@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Venta:</b>
+  <%= @pago.venta %>
+</p>
+
+<p>
+  <b>Monto:</b>
+  <%= @pago.monto %>
+</p>
+
+<p>
+  <b>Notas:</b>
+  <%= @pago.notas %>
+</p>
+
+
+<%= link_to 'Edit', edit_pago_path(@pago) %> |
+<%= link_to 'Back', pagos_path %>

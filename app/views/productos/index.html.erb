@@ -1,0 +1,27 @@
+<%= link_to 'Click aquí para agregar un nuevo producto', new_producto_path %>
+
+<h1>Lista de productos</h1>
+
+<table class='tabla-productos'>
+  <tr class='col'>
+    <th class='non'></th>
+    <th><%= sortable :id, "Código" %></th>
+    <th><%= sortable :name, "Nombre" %></th>
+    <th>Descripción</th>
+    <th class='non'></th>
+    <th class='non'></th>
+  </tr>
+
+<% @productos.each do |producto| %>
+  <tr class='row'>
+    <td class='non'><%= link_to 'Ver este producto', producto %></td>
+    <td class='key'><%= producto.id %></td>
+    <td><%= producto.name %></td>
+    <td><%= producto.description %></td>    
+    <td class='non'><%= link_to 'Modificar', edit_producto_path(producto) %></td>
+    <td class='non'><%= link_to 'Borrar', producto, method: :delete, data: { confirm: 'Estás seguro que querés borrar este producto?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

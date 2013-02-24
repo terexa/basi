@@ -1,0 +1,30 @@
+<h1>Lista de clientes</h1>
+<%= link_to 'Click aqui para agregar un nuevo cliente', new_cliente_path %>
+<br />
+<br />
+
+<table>
+  <tr>
+    <th></th>
+    <th>Código</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Dirección</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clientes.each do |cliente| %>
+  <tr>
+    <td><%= link_to 'Ver más detalles', cliente %></td>
+    <td><%= cliente.id %></td>
+    <td><%= cliente.nombre %></td>
+    <td><%= cliente.apellido %></td>
+    <td><%= cliente.calle + ' ' + cliente.altura + ' ' + cliente.casa + ' ' + cliente.piso + ' ' + cliente.barrio + ' ' + cliente.localidad %></td>    
+    <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
+    <td><%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: 'Está seguro que quiere eliminar este cliente?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

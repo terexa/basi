@@ -1,0 +1,59 @@
+// Place all the styles related to the productos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.tabla-productos{
+  border: none;
+}
+.tabla-productos tr td{
+  padding: 5px;
+}
+.tabla-productos .col{
+  border: solid;
+  border-color: white;
+  border-width: 1px;
+  background-color: #FF8000;
+}
+.tabla-productos .row{
+  border: solid;
+  border-color: white;
+  border-width: 1px;
+  background-color: #FFDCA8;
+}
+.tabla-productos .non{
+  border: none;
+  border-color: white;
+  border-width: 1px;
+  background-color: white;
+}
+.tabla-productos .col th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.tabla-productos .col th .asc { 
+  background-image: url(/images/up_arrow.gif); 
+}
+
+.tabla-productos .col th .desc { 
+  background-image: url(/images/down_arrow.gif); 
+}
+.tabla-productos .key{
+  font-weight: bold;
+  text-align: center;
+}
+.twocolumns{
+	background: #FFDCA8;
+	border: none;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+}
+.info{
+	width: 400px;
+	display: inline-block;
+	text-align: left;
+}
+.product-photo{
+	width: 500px;
+	display: inline-block;
+}

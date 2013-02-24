@@ -1,0 +1,33 @@
+<%= link_to 'Agregar una nueva venta', new_ventum_path %>
+
+<h1>Listado de ventas</h1>
+
+<table class='tabla-clientes'>
+  <tr>
+    <th></th>
+    <th>Código de Venta</th>
+    <th>Cliente</th>
+    <th>Producto</th>
+    <th>Cantidad</th>
+    <th>Precio de venta</th>
+    <th>Notas</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @venta.each do |ventum| %>
+  <tr>
+    <td><%= link_to 'Ver esta venta', ventum %></td>
+    <td><%= ventum.id %></td>
+    <td><%= ventum.cliente %></td>
+    <td><%= ventum.producto %></td>
+    <td><%= ventum.cantidad %></td>
+    <td><%= ventum.precio_venta %></td>
+    <td><%= ventum.notas %></td>
+    <td><%= link_to 'Editar', edit_ventum_path(ventum) %></td>
+    <td><%= link_to 'Eliminar', ventum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

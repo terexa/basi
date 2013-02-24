@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Información del producto</h1>
+<div class='twocolumns'>
+	<div class='info'>
+		<p>
+			<b>Nombre:</b>
+			<%= @producto.name %>
+		</p>
+
+		<p>
+			<b>Descripción:</b>
+			<%= @producto.description %>
+		</p>
+	</div>	
+	<%= image_tag(@producto.picture_url, {:class=>'product-photo'}) if @producto.picture.present? %>	
+</div>
+
+<%= link_to 'Modificar', edit_producto_path(@producto) %> |
+<%= link_to 'Volver al listado', productos_path %>

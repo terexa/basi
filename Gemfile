@@ -13,6 +13,10 @@ gem 'therubyracer'
 
 gem 'devise', '~> 2.2.3'
 
+gem 'carrierwave'
+
+gem 'table-for'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
